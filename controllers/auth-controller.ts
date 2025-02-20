@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-let auth = async (req: Request, res: Response) => {
+let authj = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     const login = await UserService.login(new Auth(email, password));
